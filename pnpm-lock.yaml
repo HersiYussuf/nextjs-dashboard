@@ -62,8 +62,11 @@ devDependencies:
     specifier: ^5.0.1
     version: 5.2.0(eslint@8.57.0)(prettier@3.2.5)(typescript@5.2.2)
   dotenv:
-    specifier: ^16.3.1
+    specifier: ^16.4.5
     version: 16.4.5
+  dotenv-expand:
+    specifier: ^11.0.6
+    version: 11.0.6
   eslint:
     specifier: ^8.52.0
     version: 8.57.0
@@ -1515,6 +1518,13 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       esutils: 2.0.3
+    dev: true
+
+  /dotenv-expand@11.0.6:
+    resolution: {integrity: sha512-8NHi73otpWsZGBSZwwknTXS5pqMOrk9+Ssrna8xCaxkzEpU9OTf9R5ArQGVw03//Zmk9MOwLPng9WwndvpAJ5g==}
+    engines: {node: '>=12'}
+    dependencies:
+      dotenv: 16.4.5
     dev: true
 
   /dotenv@16.4.5:

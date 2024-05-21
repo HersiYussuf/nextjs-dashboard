@@ -1,4 +1,4 @@
-import { sql } from '@vercel/postgres';
+import { db, sql } from '@vercel/postgres';
 import {
   CustomerField,
   CustomersTableType,
@@ -9,10 +9,14 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
+import { createClient } from '@vercel/postgres';
 
 export async function fetchRevenue() {
+  const client = await db.connect();
+
   // Add noStore() here to prevent the response from being cached.
   // This is equivalent to in fetch(..., {cache: 'no-store'}).
+
 
   try {
     // Artificially delay a response for demo purposes.
